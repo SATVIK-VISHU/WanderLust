@@ -1,0 +1,205 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex:1;
+}
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/*footer*/
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+    color: #222222;
+}
+
+.f-info-links, .f-info-socials, .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/*Cards*/
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+
+}
+
+/*Card-Effect*/
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#map {
+    height: 400px;
+    width: 80vh;
+}
+
+#filters {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 2rem;
+    margin-top: 1rem;
+    scrollbar-width: none; /* Firefox */
+}
+
+#filters::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+
+.filter {
+    flex: 0 0 auto;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+.tax-toggle {
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .tax-toggle {
+        display: none;
+    }
+}
+
+.tax-info {
+    display: none;
+}
+
+/* ===========================
+   Profile Page
+=========================== */
+
+.profile-card {
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.profile-card h2 {
+    font-weight: 700;
+}
+
+.profile-card p {
+    font-size: 1.05rem;
+}
+
+.activity-count {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.danger-card {
+    border-radius: 15px;
+}
+
+.danger-card .card-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.profile-card .card-body,
+.danger-card .card-body {
+    padding: 1.5rem !important;
+}
+
+.danger-card .card-header {
+    padding: 0.75rem 1.5rem;
+}

@@ -1,0 +1,51 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-5">
+    <div class="col-8 offset-2">
+        <h2 class="mb-4">My Account</h2>
+        <div class="card shadow profile-card">
+            <div class="card-body">
+                <h5>👤 Username</h5>
+                <p><%= currUser.username %></p> <hr>
+
+                <h5>📧 Email</h5>
+                <p><%= currUser.email %></p> <hr>
+
+                <h5>Your Activity</h5>
+                <div class="row mt-3">
+                    <div class="col-md-4 text-center">
+                        <h2 class="text-primary activity-count"><%= listingsCount %></h2>
+                        <p>Listings Created</p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <h2 class="text-success activity-count"><%= reviewsCount %></h2>
+                        <p>Reviews Written</p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <h6>Member Since</h6>
+                        <p><%= currUser.createdAt ? currUser.createdAt.toDateString() : "Not Available" %></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card border-danger mt-4 shadow danger-card">
+            <div class="card-header bg-danger text-white">Danger Zone</div>
+            <div class="card-body">
+                <p>Deleting your account is permanent.</p>
+                <p>All your listings, reviews, and account information will be permanently removed.</p>
+
+                <form action="/deleteAccount?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to permanently delete your account?\n\nThis will permanently delete:\n• Your account\n• Your listings\n• Your reviews\n\nThis action cannot be undone.');"
+                >
+                    <button class="btn btn-danger">Delete My Account</button>
+                </form>
+            </div>
+        </div>
+        <div class="mt-4 text-center">
+            <a href="/listings" class="btn btn-dark">Back to Listings</a>
+        </div>
+    </div>
+</div>
