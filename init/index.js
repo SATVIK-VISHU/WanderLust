@@ -9,7 +9,7 @@ const geocodingClient = mbxGeocoding({
     accessToken: process.env.MAP_TOKEN,
 });
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+const dbUrl = process.env.ATLASDB_URL;
 
 main()
     .then(() => {
@@ -20,8 +20,8 @@ main()
     });
 
 async function main() {
-    await mongoose.connect(MONGO_URL);
-}
+    await mongoose.connect(dbUrl);
+};
 
 const initDB = async () => {
     await Listing.deleteMany({});
@@ -34,7 +34,7 @@ const initDB = async () => {
             })
             .send();
 
-        obj.owner = "6a36282a43df08a0208e382f";
+        obj.owner = "6a46405a5399f7e092355df3";
         obj.geometry = response.body.features[0].geometry;
     }
 
