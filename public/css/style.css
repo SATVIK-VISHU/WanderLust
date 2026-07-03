@@ -5,15 +5,13 @@ body {
     min-height: 100vh;
 }
 
-.container{
+.container {
     flex:1;
-    padding-top:1rem;
 }
 
-.navbar{
-    min-height:5rem;
-    height:auto;
-    background:white;
+.navbar {
+    min-height: 5rem;
+    background-color: white;
 }
 
 .fa-compass {
@@ -107,8 +105,10 @@ body {
     height: 30vh;
 }
 
-.btns {
-    display: flex;
+.btns{
+    display:flex;
+    gap:12px;
+    align-items:center;
 }
 
 .show-card {
@@ -118,7 +118,7 @@ body {
 
 #map {
     height: 400px;
-    width: 80vh;
+    width: 100%;
 }
 
 #filters {
@@ -206,40 +206,74 @@ body {
     padding: 0.75rem 1.5rem;
 }
 
+/* ===========================
+   Mobile Responsive
+=========================== */
 
-/* ---------- Mobile Navbar ---------- */
+@media (max-width:768px){
 
-@media (max-width: 768px) {
+    /* Navbar */
 
     .navbar-collapse{
         background:#fff;
-        padding:1rem;
-        border-radius:12px;
-        margin-top:0.5rem;
-        box-shadow:0 6px 20px rgba(0,0,0,.08);
+        padding:1rem 0;
     }
 
     .navbar-nav{
-        margin-bottom:0.75rem;
+        margin-bottom:.5rem;
+        align-items:flex-start;
     }
 
-    .navbar .d-flex{
+    .navbar-nav form{
         width:100%;
-        flex-wrap:nowrap;
-        margin:0.75rem 0;
     }
 
-    .navbar .form-control{
+    .navbar-nav form input{
         flex:1;
     }
 
-    .navbar .btn{
-        white-space:nowrap;
+    .navbar-nav .d-flex.align-items-center{
+        margin-left:0 !important;
+        margin-top:.5rem;
     }
 
-    .nav-link{
-        padding:.6rem 0;
+    /* Listing Page */
+
+    .show-img{
+        height:250px;
+    }
+
+    .listing-card{
+        margin-bottom:1rem;
+    }
+
+    /* Override Bootstrap columns ONLY on mobile */
+
+    .offset-3{
+        margin-left:0 !important;
+    }
+
+    .col-8,
+    .col-6{
+        width:100% !important;
+    }
+
+    .col-5{
+        width:100% !important;
+        margin-left:0 !important;
+    }
+
+    .col-1{
+        width:auto !important;
+    }
+
+    .btns{
+        flex-wrap:wrap;
+    }
+
+    #map{
+        width:100%;
+        height:300px;
     }
 
 }
-
